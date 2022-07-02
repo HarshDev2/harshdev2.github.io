@@ -224,7 +224,7 @@ i {
 
 .aboutmedescription {
   margin-top: 48px;
-  font-size: 16px;
+  font-size: 8px;
 }
 
 .aboutmebutton {
@@ -319,6 +319,9 @@ i {
 .portfolio {
   text-align: center;
   margin-top: 100px;
+}
+.portfolio p{
+  font-size: 8px;
 }
 
 .portfolio strong {
