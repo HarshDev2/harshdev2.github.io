@@ -1,0 +1,747 @@
+:root {
+  --backcolor: #1A1839;
+  --secondcolor: #9CA4FF;
+  --backgroundcolor: black;
+  --textcolor: white;
+  --lowtextcolor: white;
+  --buttonscolor: #A5C5FF;
+}
+html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundcolor);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.hideme{
+  opacity: 0;
+}
+.navigation {
+  top: 0;
+  right: 0;
+  left: 0;
+  font-weight: bold;
+  line-height: 80px;
+  position: fixed;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1280px;
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+  font-size: 22px;
+}
+
+.logo {
+  font-size: 40px;
+  padding: 2px 0 0 0;
+}
+
+.navlinks {
+  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.navlinks a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px 12px 20px;
+  cursor: none;
+}
+
+.navlinks a:hover {
+  background-color: var(--buttonscolor);
+  border-radius: 16px;
+  transition: 0.8s;
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+  appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.hamburger span {
+  display: block;
+
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: #FfF;
+  border-radius: 6px;
+
+  transform-origin: 0 0;
+
+  transition: 0.4s;
+}
+
+.hamburger span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--secondcolor);
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+  background-color: white;
+}
+
+.mobile_nav {
+  display: none;
+}
+
+.mobile_nav.is-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  padding-top: 70px;
+  transition: 0.4s ease-in-out;
+  background-color: #000;
+  margin-top: 90px;
+}
+
+.mobile_nav.is-active a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'IBM Plex Sans Devanagari', sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 30px;
+  transition: 0.4s;
+  cursor: none;
+  width: 100%;
+  max-width: 150px;
+}
+
+.mobile_nav.is-active a:hover {
+  background-color: var(--buttonscolo);
+  border-radius: 12px;
+  cursor: none;
+}
+
+.home {
+  margin-top: 233px;
+  font-size: 86px;
+  margin-left: 20px;
+}
+
+.home p {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.home p span {
+  font-size: 80px;
+}
+
+.aboutbutton {
+  background-color: var(--secondcolor);
+  color: white;
+
+  margin-top: 32px;
+  margin-left: 20px;
+
+  border: none;
+  border-radius: 36px;
+
+  width: 240px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.aboutme {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.aboutmeheader {
+  font-size: 60px;
+}
+
+.infocontainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardview {
+  width: 200px;
+  height: 150px;
+  background-color: var(--backcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.cardview p {
+  background-color: var(--backcolor);
+}
+
+.infocontainer strong {
+  background-color: var(--backcolor);
+}
+
+i {
+  background-color: var(--backcolor);
+  font-size: 56px;
+  margin-top: 16px;
+}
+
+.aboutmedescription {
+  margin-top: 48px;
+  font-size: 16px;
+}
+
+.aboutmebutton {
+  background-color: var(--secondcolor);
+  color: white;
+
+  margin-top: 42px;
+  margin-left: 20px;
+
+  border: none;
+  border-radius: 18px;
+
+  width: 220px;
+  height: 56px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skills {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.skills strong {
+  font-size: 60px;
+}
+
+.skillsdivcontainer {
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 400px 400px;
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.skillscontainer {
+  width: 400px;
+  height: 300px;
+  background-color: var(--backcolor);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skillsgrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 20px;
+  column-gap: 50px;
+  row-gap: 10px;
+  background-color: var(--backcolor)
+}
+
+.skillsgrid_2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 20px;
+  column-gap: 50px;
+  row-gap: 10px;
+  background-color: var(--backcolor)
+}
+
+.skillscontainer strong {
+  background-color: var(--backcolor);
+  font-size: 22px;
+  padding-top: 28px;
+}
+
+.skillshow {
+  display: flex;
+  background-color: var(--backcolor);
+  align-items: flex-start;
+}
+
+.skillshow p {
+  margin-top: 16px;
+  font-size: 20px;
+  background-color: var(--backcolor);
+  margin-left: 4px;
+}
+
+.skillshow i {
+  font-size: 32px;
+}
+
+.services {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.portfolio {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.portfolio strong {
+  font-size: 60px;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact strong {
+  font-size: 60px;
+}
+
+.contactcontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactcontainer input {
+  border: solid 2px var(--secondcolor);
+  padding: 1.5rem;
+  outline: none;
+  border-radius: .75rem;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.contactcontainer input:hover {
+  outline: none;
+  border: solid 2px var(--secondcolor);
+}
+
+.contactcontainer textarea {
+  border: solid 2px var(--secondcolor);
+  padding: 1.5rem;
+  outline: none;
+  border-radius: .75rem;
+  font-size: 16px;
+}
+
+.contactcontainer textarea:hover {
+  outline: none;
+  border: solid 2px var(--secondcolor);
+}
+
+.appcontactcontainer {
+  width: 420px;
+  height: 240px;
+  background-color: var(--backcolor);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appcontactcontainer p {
+  background-color: var(--backcolor);
+  font-size: 20px
+}
+
+.appcontactcontainer a {
+  background-color: var(--backcolor);
+}
+
+.appcontactcontainer i {
+  font-size: 60px;
+  margin-top: 30px;
+}
+
+#container2 {
+  margin-top: 30px;
+}
+
+.linkwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backcolor)
+}
+
+#arrow {
+  font-size: 22px;
+  margin: 0;
+}
+
+.sendbutton {
+  background-color: #9CA4FF;
+  color: white;
+
+  margin-top: 22px;
+
+  border: none;
+  border-radius: 18px;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    top: 0;
+    right: 0;
+    left: 0;
+    font-weight: bold;
+    line-height: 80px;
+    position: fixed;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0 20px 0 20px;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 40px;
+    padding: 2px 0 0 0;
+  }
+
+  .navlinks {
+    justify-content: flex-end;
+    justify-content: space-between;
+    display: none;
+  }
+
+  .navlinks a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px 12px 20px;
+    cursor: none;
+  }
+
+  .navlinks a:hover {
+    background-color: #A5C5FF;
+    border-radius: 16px;
+    transition: 0.8s;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .home {
+    margin-top: 180px;
+    margin-left: 20px;
+  }
+
+  .home p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .home p span {
+    font-size: 40px;
+  }
+
+  .aboutbutton {
+    background-color: var(--secondcolor);
+    color: white;
+
+    margin-top: 32px;
+    margin-left: 20px;
+
+    border: none;
+    border-radius: 16px;
+
+    width: 180px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .aboutme {
+    text-align: center;
+    margin-top: 170px;
+  }
+
+  .aboutmeheader {
+    font-size: 60px;
+  }
+
+  .infocontainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardview {
+    width: 200px;
+    height: 150px;
+    background-color: var(--backcolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+  }
+
+  .cardview p {
+    background-color: var(--backcolor);
+  }
+
+  .infocontainer strong {
+    background-color: var(--backcolor);
+  }
+
+  i {
+    background-color: var(--backcolor);
+    font-size: 56px;
+    margin-top: 16px;
+  }
+
+  .aboutmedescription {
+    margin-top: 48px;
+    font-size: 14px;
+  }
+
+  .aboutmebutton {
+    background-color: var(--secondcolor);
+    color: white;
+
+    margin: 38px 0 0 0;
+
+    border: none;
+    border-radius: 18px;
+
+    width: 200px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .skills {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .skills strong {
+    font-size: 60px;
+  }
+
+  .skillsdivcontainer {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skillscontainer {
+    width: 320px;
+    height: 250px;
+    background-color: var(--backcolor);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skillsgrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px;
+    column-gap: 50px;
+    row-gap: 10px;
+    background-color: var(--backcolor)
+  }
+
+  .skillsgrid_2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px;
+    column-gap: 50px;
+    row-gap: 10px;
+    background-color: var(--backcolor)
+  }
+
+  .skillscontainer strong {
+    background-color: var(--backcolor);
+    font-size: 22px;
+    padding-top: 22px;
+  }
+
+  .skillshow {
+    display: flex;
+    background-color: var(--backcolor);
+    align-items: flex-start;
+  }
+
+  .skillshow p {
+    margin-top: 16px;
+    font-size: 16px;
+    background-color: var(--backcolor);
+    margin-left: 4px;
+  }
+
+  .skillshow i {
+    font-size: 22px;
+  }
+
+  .services {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .portfolio {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .portfolio strong {
+    font-size: 60px;
+  }
+
+  .contact {
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact strong {
+    font-size: 60px;
+  }
+
+  .contactcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactcontainer input {
+    border: solid 2px var(--secondcolor);
+    padding: 1.5rem;
+    outline: none;
+    border-radius: .75rem;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .contactcontainer input:hover {
+    outline: none;
+    border: solid 2px var(--secondcolor);
+  }
+
+  .contactcontainer textarea {
+    border: solid 2px var(--secondcolor);
+    padding: 1.5rem;
+    outline: none;
+    border-radius: .75rem;
+    font-size: 16px;
+  }
+
+  .contactcontainer textarea:hover {
+    outline: none;
+    border: solid 2px var(--secondcolor);
+  }
+
+  .appcontactcontainer {
+    width: 300px;
+    height: 180px;
+    background-color: var(--backcolor);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .appcontactcontainer p {
+    background-color: var(--backcolor);
+    font-size: 16px;
+    padding-top: 4px;
+  }
+
+  .appcontactcontainer a {
+    background-color: var(--backcolor);
+    padding-top: 7px;
+  }
+
+  .appcontactcontainer i {
+    font-size: 50px;
+    margin-top: 15px;
+  }
+
+  #container2 {
+    margin-top: 30px;
+  }
+
+  .linkwrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backcolor)
+  }
+
+  #arrow {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .sendbutton {
+    background-color: #9CA4FF;
+    color: white;
+
+    margin-top: 22px;
+
+    border: none;
+    border-radius: 18px;
+
+    width: 220px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
