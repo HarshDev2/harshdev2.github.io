@@ -1,5 +1,5 @@
 :root {
-  --backcolor: #1A1839;
+  --backcolor: #1f1d3c;
   --secondcolor: #9CA4FF;
   --backgroundcolor: black;
   --textcolor: white;
@@ -224,7 +224,7 @@ i {
 
 .aboutmedescription {
   margin-top: 48px;
-  font-size: 8px;
+  font-size: 16px;
 }
 
 .aboutmebutton {
